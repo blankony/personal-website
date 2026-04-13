@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -7,23 +6,21 @@ import ProjectsSidebar from '../components/ProjectsSidebar';
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-sans bg-gray-50">
+    <div className="min-h-screen font-sans bg-gray-50 text-gray-900">
       <Navbar />
       
-      <main className="px-6 py-8 mx-auto max-w-7xl">
-        {/* Tambahkan items-start agar sticky bisa bekerja */}
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-10 items-start">
+      <main className="px-6 py-12 mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-10 items-start">
           
-          {/* Kolom Kiri (70%) - Berisi konten memanjang */}
-          <div className="lg:col-span-7 flex flex-col divide-y divide-gray-200">
+          <div className="lg:col-span-7 flex flex-col space-y-4">
             <Hero />
+            <div className="h-px bg-gray-200 w-full"></div>
             <About />
+            <div className="h-px bg-gray-200 w-full"></div>
             <Skills />
           </div>
 
-          {/* Kolom Kanan (30%) - Sticky Sidebar */}
-          {/* class 'sticky top-24' membuat elemen ini diam di posisi saat web di-scroll */}
-          <div className="lg:col-span-3 sticky top-24">
+          <div className="lg:col-span-3 sticky top-28">
             <ProjectsSidebar />
           </div>
 

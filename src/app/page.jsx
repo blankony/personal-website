@@ -11,22 +11,20 @@ export default async function Home() {
   const { projects, skills } = await getPortfolioData();
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
+    <div className="site-shell">
       <Navbar />
-      <main className="mx-auto max-w-7xl px-6 py-12">
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-10">
-          <div className="flex flex-col space-y-4 lg:col-span-7">
-            <Hero />
-            <div className="h-px w-full bg-gray-200" />
-            <About />
-            <div className="h-px w-full bg-gray-200" />
-            <Skills skills={skills} />
-          </div>
-          <aside className="top-28 lg:sticky lg:col-span-3">
-            <ProjectsSidebar projects={projects} />
-          </aside>
+      <main>
+        <Hero />
+        <div className="content-frame">
+          <About />
+          <ProjectsSidebar projects={projects} />
+          <Skills skills={skills} />
         </div>
       </main>
+      <footer className="site-footer">
+        <p>Designed at the intersection of radio, networks, and learning systems.</p>
+        <a href="#home">Return to signal origin ↑</a>
+      </footer>
     </div>
   );
 }

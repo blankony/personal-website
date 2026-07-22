@@ -1,16 +1,20 @@
-# React + Vite
+# Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio berbasis Next.js App Router, Tailwind CSS, dan PostgreSQL.
 
-Currently, two official plugins are available:
+## Menjalankan project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Install dependency dengan `npm install`.
+2. Salin `.env.example` menjadi `.env.local`, lalu sesuaikan `DATABASE_URL`. Aktifkan `DATABASE_SSL=true` jika provider PostgreSQL mewajibkan SSL.
+3. Buat database PostgreSQL dan jalankan `npm run db:setup`.
+4. Jalankan development server dengan `npm run dev`.
 
-## React Compiler
+Buka `http://localhost:3000`. Jika `DATABASE_URL` belum tersedia, halaman tetap memakai data fallback bawaan agar UI bisa dikembangkan tanpa database lokal.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Scripts
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `npm run dev` — menjalankan Next.js development server.
+- `npm run build` — membuat production build.
+- `npm start` — menjalankan production server.
+- `npm run lint` — memeriksa kode dengan ESLint.
+- `npm run db:setup` — membuat tabel dan seed data PostgreSQL.

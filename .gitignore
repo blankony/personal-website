@@ -30,3 +30,7 @@ out
 *.njsproj
 *.sln
 *.sw?
+
+/graphify-out
+AGENTS.md
+.gitignore

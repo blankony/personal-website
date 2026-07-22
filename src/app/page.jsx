@@ -22,8 +22,8 @@ export default async function Home() {
         </div>
       </main>
       <footer className="site-footer">
-        <p>Designed at the intersection of radio, networks, and learning systems.</p>
-        <a href="#home">Return to signal origin ↑</a>
+        <p>Portfolio · built with Next.js and PostgreSQL</p>
+        <a href="#home">Back to top</a>
       </footer>
     </div>
   );

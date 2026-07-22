@@ -1,12 +1,11 @@
 export default function Skills({ skills }) {
   return (
-    <section id="skills" className="skills-section section-anchor">
+    <section id="skills" className="section skills-section section-anchor">
       <div className="skills-intro">
         <div className="section-label">
-          <span>Capabilities</span>
-          <small>Tools across the stack</small>
+          <span>Skills</span>
         </div>
-        <h2>A hybrid toolkit for networks, models, and interfaces.</h2>
+        <h2>Tools and topics I use while learning and building.</h2>
       </div>
       <div className="skill-matrix">
         {skills.map((skill, index) => (

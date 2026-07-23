@@ -1,4 +1,4 @@
-import "./globals.css";
+﻿import "./globals.css";
 
 export const metadata = {
   title: "Portfolio | Telecommunication Engineer",
@@ -8,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body>{children}</body>
+      <body className="bg-[#f7f7f3] text-[#151515] antialiased">{children}</body>
     </html>
   );
 }

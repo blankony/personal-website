@@ -12,6 +12,9 @@ export default function ProjectsSidebar({ projects }) {
         {projects.map((project, index) => (
           <article key={project.id} className="project-row">
             <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
+            <div className="project-image-placeholder" aria-hidden="true">
+              <span>Project image</span>
+            </div>
             <div className="project-main">
               <p className="project-tech">{project.technology}</p>
               <h2>{project.title}</h2>

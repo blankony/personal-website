@@ -16,7 +16,10 @@ export default function Hero() {
           <a className="button-secondary" href="#about">About me</a>
         </div>
       </div>
-      <div className="hero-card" aria-label="Current focus">
+      <div className="hero-card" aria-label="Profile photo placeholder">
+        <div className="profile-placeholder" aria-hidden="true">
+          <span>Your photo</span>
+        </div>
         <span>Current focus</span>
         <p>Learning by building: portfolio, PostgreSQL-backed content, and applied network projects.</p>
       </div>

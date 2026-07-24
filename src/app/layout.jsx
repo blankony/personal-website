@@ -1,8 +1,8 @@
 ﻿import "./globals.css";
 
 export const metadata = {
-  title: "Portfolio | Telecommunication Engineer",
-  description: "Portfolio mahasiswa Teknik Telekomunikasi yang berfokus pada jaringan dan deep learning.",
+  title: "Arya Setiawan | Telecommunication Engineer",
+  description: "Portfolio Arya Setiawan, mahasiswa Teknik Telekomunikasi semester 7 asal Tangerang.",
 };
 
 export default function RootLayout({ children }) {

@@ -17,9 +17,9 @@
           hasil final yang kaku.
         </p>
         <dl className="border-t border-[#deded4]">
-          <div className="flex justify-between gap-5 border-b border-[#deded4] py-4"><dt>Current mode</dt><dd className="text-right font-semibold text-[#151515]">Semester 6</dd></div>
+          <div className="flex justify-between gap-5 border-b border-[#deded4] py-4"><dt>Current mode</dt><dd className="text-right font-semibold text-[#151515]">Semester 7</dd></div>
           <div className="flex justify-between gap-5 border-b border-[#deded4] py-4"><dt>Primary lens</dt><dd className="text-right font-semibold text-[#151515]">Systems thinking</dd></div>
-          <div className="flex justify-between gap-5 border-b border-[#deded4] py-4"><dt>Based in</dt><dd className="text-right font-semibold text-[#151515]">Bandung, ID</dd></div>
+          <div className="flex justify-between gap-5 border-b border-[#deded4] py-4"><dt>From</dt><dd className="text-right font-semibold text-[#151515]">Tangerang, ID</dd></div>
         </dl>
       </div>
     </section>

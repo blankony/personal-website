@@ -1,4 +1,5 @@
-﻿import "./globals.css";
+import "./globals.css";
+import ClickSpark from "@/components/ClickSpark";
 
 export const metadata = {
   title: "Arya Setiawan | Telecommunication Engineer",
@@ -8,7 +9,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body className="bg-[#f7f7f3] text-[#151515] antialiased">{children}</body>
+      <body className="bg-[#f7f7f3] text-[#151515] antialiased">
+        <ClickSpark sparkColor="#1f5eff" sparkSize={12} sparkRadius={20}>
+          {children}
+        </ClickSpark>
+      </body>
     </html>
   );
 }

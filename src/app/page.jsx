@@ -1,4 +1,4 @@
-﻿import About from "../components/About";
+import About from "../components/About";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import ProjectsSidebar from "../components/ProjectsSidebar";
@@ -13,7 +13,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <div className="mx-auto w-[min(100%-40px,1120px)] max-sm:w-[min(100%-28px,1120px)]">
           <About />

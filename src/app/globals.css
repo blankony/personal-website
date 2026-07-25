@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 html {
   scroll-behavior: smooth;
@@ -12,5 +12,21 @@ html {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+.dot-grid-background {
+  background-image:
+    radial-gradient(circle at 72% 18%, rgb(31 94 255 / 0.12), transparent 36%),
+    radial-gradient(circle, rgb(31 94 255 / 0.28) 1.5px, transparent 1.75px);
+  background-position: center, 0 0;
+  background-size: auto, 29px 29px;
+  mix-blend-mode: multiply;
+  transition: opacity 300ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot-grid-background {
+    opacity: 0.42;
   }
 }

@@ -15,10 +15,6 @@ out
 .env*.local
 .env.local
 
-# Local PostgreSQL artifacts
-.postgres-data/
-*.dump
-*.backup
 
 # Editor directories and files
 .vscode/*

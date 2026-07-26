@@ -11,7 +11,6 @@ Portfolio berbasis Next.js App Router, Tailwind CSS, dan asset lokal.
 
 Buka `http://localhost:3000`. Data portfolio dibaca dari `src/data/portfolio.js`, tanpa koneksi database.
 
-Konfigurasi, schema, script, dan dokumentasi PostgreSQL masih disimpan untuk penggunaan mendatang, tetapi tidak dipakai runtime website.
 
 ## Scripts
 
@@ -19,4 +18,3 @@ Konfigurasi, schema, script, dan dokumentasi PostgreSQL masih disimpan untuk pen
 - `npm run build` — membuat production build.
 - `npm start` — menjalankan production server.
 - `npm run lint` — memeriksa kode dengan ESLint.
-- `npm run db:setup` — utilitas PostgreSQL lama; tetap tersedia tetapi tidak diperlukan website.

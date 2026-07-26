@@ -6,7 +6,7 @@ export const profile = {
 export const skills = [
   "Python",
   "Next.js",
-  "PostgreSQL",
+  "JavaScript",
   "Tailwind CSS",
   "Machine Learning",
   "Network Security",

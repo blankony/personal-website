@@ -1,4 +1,6 @@
-﻿export default function ProjectsSidebar({ projects }) {
+import LocalImage from "./LocalImage";
+
+export default function ProjectsSidebar({ projects }) {
   return (
     <section id="projects" className="scroll-mt-[120px] border-t border-[#deded4] py-24 lg:py-36">
       <div className="grid gap-9 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-20">
@@ -12,8 +14,14 @@
         {projects.map((project, index) => (
           <article key={project.id} className="grid gap-6 rounded-3xl border border-[#deded4] bg-white/60 p-7 transition duration-200 hover:-translate-y-1 hover:border-[#1f5eff]/40 hover:bg-white sm:grid-cols-[80px_minmax(180px,260px)_minmax(0,1fr)] sm:p-10 lg:p-12">
             <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#1f5eff]">{String(index + 1).padStart(2, "0")}</span>
-            <div className="relative grid min-h-[210px] place-items-center overflow-hidden rounded-2xl border border-dashed border-[#1f5eff]/35 bg-[#edf2ff] text-xs font-bold uppercase tracking-[0.12em] text-[#1f5eff]/80 before:absolute before:inset-5 before:rounded-[inherit] before:border before:border-[#1f5eff]/20 before:content-[''] sm:min-h-[170px]" aria-hidden="true">
-              <span className="relative z-10">Project image</span>
+            <div className="relative min-h-[210px] overflow-hidden rounded-2xl border border-[#deded4] sm:min-h-[170px]">
+              <LocalImage
+                src={project.image}
+                alt={`Preview ${project.title}`}
+                sizes="(min-width: 640px) 260px, 90vw"
+                placeholder="Project image"
+                className="h-full w-full object-cover"
+              />
             </div>
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#1f5eff]">{project.technology}</p>

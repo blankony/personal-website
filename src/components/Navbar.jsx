@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import OptionWheel from "./OptionWheel";
 
 const sections = [
   { id: "home", label: "Home", number: "01" },
@@ -73,27 +72,28 @@ export default function Navbar() {
           <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#85857c]">Portfolio index</p>
         </div>
 
-        <OptionWheel
-          items={sections.map(section => `${section.number}  ${section.label}`)}
-          selected={activeIndex}
-          defaultSelected={0}
-          onChange={scrollToSection}
-          textColor="#8a8a82"
-          activeColor="#1f5eff"
-          side="left"
-          fontSize={1.05}
-          spacing={2.8}
-          curve={0.7}
-          tilt={7}
-          blur={0}
-          fade={0.24}
-          minOpacity={0.28}
-          smoothing={240}
-          inset={20}
-          draggable={false}
-          wheelEnabled={false}
-          className="focus-visible:rounded-2xl focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#1f5eff]/35"
-        />
+        <ul className="absolute left-5 top-1/2 flex -translate-y-1/2 flex-col gap-1">
+          {sections.map((section, index) => {
+            const isActive = activeIndex === index;
+
+            return (
+              <li key={section.id}>
+                <a
+                  href={`#${section.id}`}
+                  aria-current={isActive ? "location" : undefined}
+                  onClick={event => { event.preventDefault(); scrollToSection(index); }}
+                  className={`group inline-flex min-h-11 items-center gap-3 rounded-xl px-3 py-2 text-sm font-bold transition-colors focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-[#1f5eff]/35 ${isActive ? "text-[#1f5eff]" : "text-[#8a8a82] hover:text-[#151515]"}`}
+                >
+                  <span className={`text-[0.68rem] font-extrabold tracking-[0.14em] ${isActive ? "text-[#1f5eff]" : "text-[#b5b5ac] group-hover:text-[#85857c]"}`}>
+                    {section.number}
+                  </span>
+                  {section.label}
+                  <span className={`h-1.5 w-1.5 rounded-full transition-opacity ${isActive ? "bg-[#1f5eff] opacity-100" : "opacity-0"}`} aria-hidden="true" />
+                </a>
+              </li>
+            );
+          })}
+        </ul>
 
         <div className="absolute bottom-0 left-5 flex items-center gap-3 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-[#85857c]">
           <span className="h-2 w-2 rounded-full bg-[#1f5eff]" aria-hidden="true" />

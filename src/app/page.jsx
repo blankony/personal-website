@@ -21,7 +21,10 @@ export default function Home() {
       </main>
       <footer className="mx-auto flex w-[min(100%-40px,1120px)] flex-col gap-6 border-t border-[#deded4] py-9 text-sm text-[#6b6b63] sm:flex-row sm:items-center sm:justify-between max-sm:w-[min(100%-28px,1120px)]">
         <p>Portfolio · built with Next.js and local assets</p>
-        <a className="font-bold text-[#151515] transition-colors hover:text-[#1f5eff] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#1f5eff]/35" href="#home">Back to top</a>
+        <div className="flex flex-wrap items-center gap-5">
+          <a className="font-bold text-[#151515] transition-colors hover:text-[#1f5eff] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#1f5eff]/35" href={`mailto:${profile.email}`}>{profile.email}</a>
+          <a className="font-bold text-[#151515] transition-colors hover:text-[#1f5eff] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#1f5eff]/35" href="#home">Back to top</a>
+        </div>
       </footer>
     </div>
   );

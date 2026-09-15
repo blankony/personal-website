@@ -7,7 +7,7 @@ export default function ProjectsSidebar({ projects }) {
         <div className="h-fit lg:sticky lg:top-[110px]">
           <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#1f5eff]">Projects</span>
         </div>
-        <p className="max-w-[680px] text-[clamp(1.8rem,4vw,3.2rem)] leading-[1.12] tracking-[-0.045em]">Beberapa pekerjaan yang ingin saya kembangkan dan rapikan terus.</p>
+        <p className="max-w-[680px] text-[clamp(1.8rem,4vw,3.2rem)] leading-[1.12] tracking-[-0.045em]">Work I keep building on — antennas, networks, and applied ML.</p>
       </div>
 
       <div className="mt-16 grid gap-5">
@@ -27,6 +27,26 @@ export default function ProjectsSidebar({ projects }) {
               <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#1f5eff]">{project.technology}</p>
               <h2 className="mt-3 text-[clamp(1.55rem,3vw,2.4rem)] leading-[1.1] tracking-[-0.04em]">{project.title}</h2>
               <p className="mt-5 max-w-[720px] text-[#6b6b63]">{project.description}</p>
+              {project.results?.length > 0 && (
+                <ul className="mt-5 grid max-w-[720px] gap-2">
+                  {project.results.map(result => (
+                    <li key={result} className="flex gap-2.5 text-[0.95rem] text-[#151515]">
+                      <span className="mt-[0.55rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[#1f5eff]" aria-hidden="true" />
+                      {result}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex min-h-11 items-center rounded-full border border-[#deded4] px-5 text-sm font-bold transition duration-200 hover:-translate-y-0.5 hover:border-[#151515] hover:bg-white focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#1f5eff]/35"
+                >
+                  View project →
+                </a>
+              )}
             </div>
           </article>
         ))}

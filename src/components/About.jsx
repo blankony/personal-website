@@ -6,19 +6,22 @@
       </div>
       <div>
         <p className="max-w-[820px] text-[clamp(2rem,5vw,4.1rem)] leading-[1.08] tracking-[-0.055em]">
-          Saya tertarik pada cara jaringan bekerja, cara data diproses, dan cara model machine learning
-          bisa membantu menyelesaikan masalah teknis yang nyata.
+          I care about how networks behave, how antennas radiate, and how data
+          can answer real engineering questions.
         </p>
       </div>
       <div className="grid gap-8 text-[#6b6b63] lg:col-start-2 lg:grid-cols-[minmax(0,1fr)_minmax(240px,320px)] lg:gap-16">
         <p className="max-w-[640px]">
-          Saat ini saya mendalami 3GPP LTE release, optimasi QoS, Hybrid TabNet, dan Graph Neural
-          Network untuk indoor positioning. Website ini saya buat sebagai tempat berkembang, bukan
-          hasil final yang kaku.
+          I am a 7th-semester telecommunication engineering student working on
+          microstrip antenna design during my research internship at BRIN —
+          from CST simulation to S-parameter measurement. Alongside that I study
+          3GPP LTE, QoS optimization, and applied machine learning for
+          positioning problems. This site is where I publish what I build, not
+          a finished monument.
         </p>
         <dl className="border-t border-[#deded4]">
-          <div className="flex justify-between gap-5 border-b border-[#deded4] py-4"><dt>Current mode</dt><dd className="text-right font-semibold text-[#151515]">Semester 7</dd></div>
-          <div className="flex justify-between gap-5 border-b border-[#deded4] py-4"><dt>Primary lens</dt><dd className="text-right font-semibold text-[#151515]">Systems thinking</dd></div>
+          <div className="flex justify-between gap-5 border-b border-[#deded4] py-4"><dt>Current mode</dt><dd className="text-right font-semibold text-[#151515]">Semester 7 · BRIN intern</dd></div>
+          <div className="flex justify-between gap-5 border-b border-[#deded4] py-4"><dt>Primary lens</dt><dd className="text-right font-semibold text-[#151515]">Antennas & networks</dd></div>
           <div className="flex justify-between gap-5 border-b border-[#deded4] py-4"><dt>From</dt><dd className="text-right font-semibold text-[#151515]">Tangerang, ID</dd></div>
         </dl>
       </div>

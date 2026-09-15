@@ -1,15 +1,14 @@
 import "./globals.css";
-import ClickSpark from "@/components/ClickSpark";
 import DotGrid from "@/components/DotGrid";
 
 export const metadata = {
-  title: "Arya Setiawan | Telecommunication Engineer",
-  description: "Portfolio Arya Setiawan, mahasiswa Teknik Telekomunikasi semester 7 asal Tangerang.",
+  title: "Arya Setiawan | Telecommunication & Antenna Engineer",
+  description: "Portfolio of Arya Setiawan, telecommunication engineering student working on microstrip antenna design at BRIN.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id">
+    <html lang="en">
       <body className="relative isolate bg-[#f7f7f3] text-[#151515] antialiased">
         <div className="dot-grid-background pointer-events-none fixed inset-0 z-0 opacity-60" aria-hidden="true">
           <DotGrid
@@ -26,9 +25,7 @@ export default function RootLayout({ children }) {
           />
         </div>
         <div className="relative z-10">
-          <ClickSpark sparkColor="#1f5eff" sparkSize={12} sparkRadius={20}>
-            {children}
-          </ClickSpark>
+          {children}
         </div>
       </body>
     </html>

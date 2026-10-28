@@ -5,15 +5,22 @@ export const profile = {
 };
 
 export const skills = [
-  "Microstrip Antenna Design",
-  "CST Studio Suite",
-  "S11 / VSWR Analysis",
-  "4G LTE / 5G Architecture",
-  "Network Security",
-  "Python for RF Analysis",
-  "Machine Learning",
-  "Next.js",
-].map((name, index) => ({ id: index + 1, name }));
+  {
+    id: 1,
+    name: "RF & Antennas",
+    items: ["Microstrip Antenna Design", "CST Studio Suite", "S11 / VSWR Analysis"],
+  },
+  {
+    id: 2,
+    name: "Networks",
+    items: ["4G LTE / 5G Architecture", "Network Security", "QoS Measurement & Analysis"],
+  },
+  {
+    id: 3,
+    name: "Software & Data",
+    items: ["Python for RF Analysis", "Machine Learning", "Next.js"],
+  },
+];
 
 export const projects = [
   {
@@ -22,7 +29,7 @@ export const projects = [
     technology: "BRIN Internship · Antenna Design",
     description:
       "Low-cost stacked microstrip antenna covering the GPS L1/L2 bands, designed during my research internship at BRIN.",
-    image: "/images/projects/gps-antenna.png",
+    image: null,
     results: [
       "Stacked-patch geometry targeting GPS L1 (1575 MHz) and L2 (1227 MHz)",
       "Return loss and radiation pattern tuned in CST Studio Suite",
@@ -36,7 +43,7 @@ export const projects = [
     technology: "Network Analysis",
     description:
       "Case study on latency micro-dynamics in Mobile Legends: Bang Bang over a live LTE network.",
-    image: "/images/projects/qos-lte.png",
+    image: null,
     results: [
       "LTE latency and jitter captured during live game sessions",
       "Delay micro-dynamics analyzed across match phases",
@@ -50,7 +57,7 @@ export const projects = [
     technology: "Deep Learning",
     description:
       "Hybrid TabNet + GNN model for Wi-Fi fingerprint positioning on the UJIIndoorLoc dataset.",
-    image: "/images/projects/indoor-positioning.png",
+    image: null,
     results: [
       "Hybrid TabNet + GNN model on the UJIIndoorLoc dataset",
       "Graph built from access-point signal fingerprints across floors",
@@ -64,7 +71,7 @@ export const projects = [
     technology: "Lua Script",
     description:
       "Countdown automation script for live tournament broadcast overlays.",
-    image: "/images/projects/obs-countdown.png",
+    image: null,
     results: [
       "Automated countdown overlays for live tournament broadcasts",
       "Scene control scripted in OBS via Lua",

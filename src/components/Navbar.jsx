@@ -6,7 +6,7 @@ const sections = [
   { id: "home", label: "Home", number: "01" },
   { id: "about", label: "About", number: "02" },
   { id: "projects", label: "Projects", number: "03" },
-  { id: "skills", label: "Skills", number: "04" },
+  { id: "skills", label: "Capabilities", number: "04" },
 ];
 
 export default function Navbar() {
@@ -59,17 +59,17 @@ export default function Navbar() {
 
   return (
     <>
-      <a href="#main-content" className="fixed left-4 top-4 z-50 -translate-y-20 rounded-full bg-[#151515] px-5 py-3 text-sm font-bold text-white transition-transform focus:translate-y-0">
+      <a href="#main-content" className="fixed left-4 top-4 z-50 -translate-y-20 rounded-full bg-ink px-5 py-3 text-sm font-bold text-white transition-transform focus:translate-y-0">
         Skip to content
       </a>
 
       <nav className="fixed left-6 top-1/2 z-40 hidden h-[360px] w-[250px] -translate-y-1/2 xl:block" aria-label="Primary navigation">
-        <div className="absolute left-0 top-1/2 h-[292px] w-px -translate-y-1/2 bg-[#deded4]" aria-hidden="true" />
+        <div className="absolute left-0 top-1/2 h-[292px] w-px -translate-y-1/2 bg-line" aria-hidden="true" />
         <div className="absolute left-5 top-0">
-          <a href="#home" onClick={event => { event.preventDefault(); scrollToSection(0); }} className="inline-flex min-h-11 items-center text-xs font-extrabold uppercase tracking-[0.14em] text-[#151515] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#1f5eff]/35">
+          <a href="#home" onClick={event => { event.preventDefault(); scrollToSection(0); }} className="inline-flex min-h-11 items-center text-xs font-extrabold uppercase tracking-[0.14em] text-ink focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-signal/35">
             Arya Setiawan
           </a>
-          <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#85857c]">Portfolio index</p>
+          <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-ink-faint">Portfolio index</p>
         </div>
 
         <ul className="absolute left-5 top-1/2 flex -translate-y-1/2 flex-col gap-1">
@@ -82,28 +82,28 @@ export default function Navbar() {
                   href={`#${section.id}`}
                   aria-current={isActive ? "location" : undefined}
                   onClick={event => { event.preventDefault(); scrollToSection(index); }}
-                  className={`group inline-flex min-h-11 items-center gap-3 rounded-xl px-3 py-2 text-sm font-bold transition-colors focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-[#1f5eff]/35 ${isActive ? "text-[#1f5eff]" : "text-[#8a8a82] hover:text-[#151515]"}`}
+                  className={`group inline-flex min-h-11 items-center gap-3 rounded-xl px-3 py-2 text-sm font-bold transition-colors focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-signal/35 ${isActive ? "text-signal" : "text-ink-faint hover:text-ink"}`}
                 >
-                  <span className={`text-[0.68rem] font-extrabold tracking-[0.14em] ${isActive ? "text-[#1f5eff]" : "text-[#b5b5ac] group-hover:text-[#85857c]"}`}>
+                  <span className={`text-[0.68rem] font-extrabold tracking-[0.14em] ${isActive ? "text-signal" : "text-ink-faint group-hover:text-ink-soft"}`}>
                     {section.number}
                   </span>
                   {section.label}
-                  <span className={`h-1.5 w-1.5 rounded-full transition-opacity ${isActive ? "bg-[#1f5eff] opacity-100" : "opacity-0"}`} aria-hidden="true" />
+                  <span className={`h-1.5 w-1.5 rounded-full transition-opacity ${isActive ? "bg-signal opacity-100" : "opacity-0"}`} aria-hidden="true" />
                 </a>
               </li>
             );
           })}
         </ul>
 
-        <div className="absolute bottom-0 left-5 flex items-center gap-3 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-[#85857c]">
-          <span className="h-2 w-2 rounded-full bg-[#1f5eff]" aria-hidden="true" />
+        <div className="absolute bottom-0 left-5 flex items-center gap-3 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-ink-faint">
+          <span className="h-2 w-2 rounded-full bg-signal" aria-hidden="true" />
           Scroll to explore
         </div>
       </nav>
 
-      <nav className="sticky top-0 z-40 border-b border-[#deded4]/80 bg-[#f7f7f3]/92 backdrop-blur-xl xl:hidden" aria-label="Primary navigation">
-        <div className="mx-auto flex min-h-[68px] w-[min(100%-28px,1120px)] items-center justify-between gap-4">
-          <a href="#home" onClick={event => { event.preventDefault(); scrollToSection(0); }} className="inline-flex min-h-11 items-center font-extrabold tracking-[-0.03em] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#1f5eff]/35">
+      <nav className="sticky top-0 z-40 border-b border-line/80 bg-paper/92 backdrop-blur-xl xl:hidden" aria-label="Primary navigation">
+        <div className="mx-auto flex min-h-[68px] w-[min(100%-28px,1040px)] items-center justify-between gap-4">
+          <a href="#home" onClick={event => { event.preventDefault(); scrollToSection(0); }} className="inline-flex min-h-11 items-center font-extrabold tracking-[-0.03em] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-signal/35">
             Arya Setiawan
           </a>
           <div className="flex items-center gap-1" aria-label="Page sections">
@@ -117,7 +117,7 @@ export default function Navbar() {
                   href={`#${section.id}`}
                   aria-current={isActive ? "location" : undefined}
                   onClick={event => { event.preventDefault(); scrollToSection(sectionIndex); }}
-                  className={`inline-flex min-h-11 items-center rounded-full px-3 text-sm font-semibold transition-colors focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-[#1f5eff]/35 max-sm:px-2.5 max-sm:text-xs ${isActive ? "bg-[#1f5eff] text-white" : "text-[#6b6b63] hover:bg-white hover:text-[#151515]"}`}
+                  className={`inline-flex min-h-11 items-center rounded-full px-3 text-sm font-semibold transition-colors focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-signal/35 max-sm:px-2.5 max-sm:text-xs ${isActive ? "bg-signal text-white" : "text-ink-soft hover:bg-raised hover:text-ink"}`}
                 >
                   {section.label}
                 </a>

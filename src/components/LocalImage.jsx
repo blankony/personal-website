@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function LocalImage({ src, alt, sizes, priority = false, className = "", placeholder }) {
+export default function LocalImage({ src, alt, sizes, priority = false, className = "", placeholder, fallback }) {
   const [failed, setFailed] = useState(false);
 
   if (!src || failed) {
+    if (fallback) return fallback;
     return (
-      <div className={`grid place-items-center bg-[#edf2ff] px-4 text-center text-xs font-bold uppercase tracking-[0.12em] text-[#1f5eff]/80 ${className}`}>
+      <div className={`grid place-items-center bg-tint px-4 text-center font-mono text-xs font-bold uppercase tracking-[0.12em] text-signal/80 ${className}`}>
         {placeholder}
       </div>
     );

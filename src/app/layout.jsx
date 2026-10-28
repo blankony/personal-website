@@ -1,5 +1,19 @@
 import "./globals.css";
+import { Bricolage_Grotesque, Spline_Sans_Mono } from "next/font/google";
 import DotGrid from "@/components/DotGrid";
+
+const display = Bricolage_Grotesque({
+  subsets: ["latin"],
+  axes: ["opsz"],
+  variable: "--font-bricolage",
+  display: "swap",
+});
+
+const mono = Spline_Sans_Mono({
+  subsets: ["latin"],
+  variable: "--font-spline-mono",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Arya Setiawan | Telecommunication & Antenna Engineer",
@@ -8,8 +22,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="relative isolate bg-[#f7f7f3] text-[#151515] antialiased">
+    <html lang="en" className={`${display.variable} ${mono.variable}`}>
+      <body className="relative isolate bg-paper font-display text-ink antialiased">
         <div className="dot-grid-background pointer-events-none fixed inset-0 z-0 opacity-60" aria-hidden="true">
           <DotGrid
             dotSize={7}

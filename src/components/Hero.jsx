@@ -1,36 +1,25 @@
-import LocalImage from "./LocalImage";
+import S11Panel from "./S11Panel";
 
-export default function Hero({ profile }) {
+export default function Hero() {
   return (
-    <section id="home" className="mx-auto grid min-h-[calc(100svh-76px)] w-[min(100%-40px,1120px)] items-end gap-10 py-20 sm:py-24 lg:grid-cols-[minmax(0,1fr)_minmax(280px,380px)] lg:gap-24 lg:py-36 max-sm:min-h-0 max-sm:w-[min(100%-28px,1120px)]">
-      <div>
-        <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#1f5eff]">Telecommunication & Antenna Engineering</p>
-        <h1 className="mt-5 max-w-[780px] text-[clamp(3rem,10vw,7.5rem)] font-extrabold leading-[0.94] tracking-[-0.08em]">
-          Hi, I&apos;m Arya Setiawan.
+    <section id="home" className="mx-auto grid min-h-[calc(100svh-76px)] w-[min(100%-40px,1040px)] items-center gap-14 py-16 sm:py-24 lg:grid-cols-[minmax(0,1fr)_minmax(320px,440px)] lg:gap-20 lg:py-28 max-sm:min-h-0 max-sm:w-[min(100%-28px,1040px)] xl:ml-[310px] xl:mr-auto xl:w-[min(100%-350px,1040px)]">
+      <div className="rise">
+        <h1 className="max-w-[820px] text-[clamp(3rem,8vw,6rem)] font-extrabold leading-[0.95] tracking-[-0.03em]">
+          Antennas, measured.
         </h1>
-        <p className="mt-9 max-w-[650px] text-[clamp(1.05rem,2vw,1.25rem)] leading-relaxed text-[#6b6b63]">
-          Telecommunication engineering student designing microstrip antennas at
-          BRIN — from CST simulation to measured S-parameters. I also work on
-          network analysis and applied machine learning.
+        <p className="mt-8 max-w-[620px] text-[clamp(1.05rem,2vw,1.25rem)] leading-relaxed text-ink-soft">
+          I&apos;m Arya Setiawan — a telecommunication engineering student
+          designing microstrip antennas at BRIN, from CST simulation to
+          measured S-parameters. I also work on network analysis and applied
+          machine learning.
         </p>
-        <div className="mt-11 flex flex-wrap gap-3.5">
-          <a className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#151515] px-6 font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#1f5eff]/35" href="#projects">View projects</a>
-          <a className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#deded4] px-6 font-bold transition duration-200 hover:-translate-y-0.5 hover:border-[#151515] hover:bg-white focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#1f5eff]/35" href={`mailto:${profile.email}`}>Contact me</a>
+        <div className="mt-10 flex flex-wrap gap-3.5">
+          <a className="inline-flex min-h-12 items-center justify-center rounded-full bg-ink px-6 font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-signal/35" href="#projects">View projects</a>
+          <a className="inline-flex min-h-12 items-center justify-center rounded-full border border-line px-6 font-bold transition duration-200 hover:-translate-y-0.5 hover:border-ink hover:bg-raised focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-signal/35" href="mailto:aryasetiawan112@gmail.com">Contact me</a>
         </div>
       </div>
-      <div className="rounded-3xl border border-[#deded4] bg-white p-7 shadow-[0_24px_80px_rgba(20,20,20,0.08)]" aria-label="Profile photo">
-        <div className="relative mb-6 aspect-square overflow-hidden rounded-2xl border border-[#deded4]">
-          <LocalImage
-            src={profile.image}
-            alt={`Profile photo of ${profile.name}`}
-            sizes="(min-width: 1024px) 324px, 80vw"
-            priority
-            placeholder="Your photo"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#1f5eff]">Current focus</span>
-        <p className="mt-5 text-[#6b6b63]">BRIN research intern: microstrip antenna design, simulation, and measurement.</p>
+      <div className="rise [animation-delay:120ms]">
+        <S11Panel />
       </div>
     </section>
   );

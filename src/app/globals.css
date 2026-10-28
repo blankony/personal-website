@@ -1,12 +1,37 @@
 @import "tailwindcss";
 
+@theme {
+  --color-paper: #f7f7f3;
+  --color-raised: #fffffd;
+  --color-ink: #151515;
+  --color-ink-soft: #6b6b63;
+  --color-ink-faint: #6f6f66;
+  --color-line: #deded4;
+  --color-line-soft: #e8e8df;
+  --color-tint: #edf2ff;
+  --color-signal: #1f5eff;
+  --color-signal-bright: #6f97ff;
+  --color-panel: #10151b;
+  --color-panel-line: #222c38;
+  --color-panel-ink: #aebdd1;
+  --color-panel-dim: #7e8ea3;
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-spline-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #b5b5aa transparent;
 }
 
 ::selection {
-  background: #1f5eff;
+  background: var(--color-signal);
   color: white;
+}
+
+a {
+  text-underline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -28,5 +53,22 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .dot-grid-background {
     opacity: 0.42;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 }
